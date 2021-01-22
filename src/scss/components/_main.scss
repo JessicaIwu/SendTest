@@ -1,0 +1,43 @@
+.main {
+  // min-height: 100%;
+  // height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include screen(small) {
+    width: 100%;
+  }
+
+}
+.inner-container {
+  margin: 7rem auto;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  background: #f5f8f9;
+  padding: 1rem;
+  @include screen(small) {
+    display: block;
+  }
+  &__curved {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    width: 60%;
+    background-color: #FFFFFF;
+    padding: 3.5rem;
+    @include screen(small) {
+      width: 100%;
+      padding: 1.5rem;
+    }
+  }
+  &__no-curve {
+    width: 40%;
+    @include screen(small) {
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+}

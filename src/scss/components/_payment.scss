@@ -1,0 +1,133 @@
+
+//payment
+
+.payment_details {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    h4 {
+      font-size: 24px;
+    }
+    .h6 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 14px;
+      color: #cccccc;
+    }
+    .secure-card {
+      display: flex;
+      img {
+        height: 25px;
+        padding-right: 0.5rem;
+      }
+    }
+  }
+}
+.credit-card-tab {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  @include screen(small) {
+    display: block;
+  }
+  .card__images {
+    width: 40%;
+    @include screen(small) {
+      width: 100%;
+    }
+    img {
+      margin-bottom: 1rem;
+      margin-right: 1rem;
+      width: 300px;
+      height: 150px;
+    }
+    .add-new-card {
+      // width: 260px;
+      min-width: 206px;
+      height: 150px;
+      border: 1px solid black;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      background: black;
+      position: relative;
+      img {
+        margin-bottom: unset;
+        margin-right: unset;
+        width: unset;
+        height: unset;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+  .card__data {
+    width: 50%;
+    @include screen(small) {
+      width: 100%;
+      margin-top: 2rem;
+    }
+    input {
+      /*RemoveFirst*/
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 100%;
+      border: 1px solid $silver1;
+      box-shadow: 0px 0px 40px #f5f8f9;
+      padding: 12px 21px;
+      background: #f5f8f9;
+      outline: none;
+      font-size: 14px;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      margin-bottom: 2rem;
+
+      &::placeholder {
+        color: black;
+        font-size: inherit;
+      }
+
+    }
+  }
+}
+.flexer {
+  display: flex;
+  justify-content: space-between;
+  .first-child {
+    margin-right: 1rem;
+  }
+}
+.btn {
+  background: black;
+  padding: 1rem 1.5rem;
+  color: #a3a3a3;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  font-size: 12px;
+  border: 1px solid black;
+  cursor: pointer;
+  @include screen(small) {
+    padding: 0.5rem;
+  }
+}
+.cancel {
+  color: #cccccc;
+  font-size: 12px;
+}
+.action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

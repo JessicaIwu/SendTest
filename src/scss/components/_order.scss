@@ -1,0 +1,115 @@
+//Order Summary
+
+.order_details {
+  padding: 3.5rem;
+  @include screen(small) {
+    padding: 0.5rem;
+  }
+  h4 {
+    font-size: 24px;
+  }
+  .h6 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 14px;
+    color: #cccccc;
+  }
+  .secure-card {
+    display: flex;
+    img {
+      height: 25px;
+      padding-right: 0.5rem;
+    }
+  }
+  &__activities {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .det {
+    display: flex;
+    justify-content: space-between;
+    div {
+      // border: 1px solid;
+      margin-left: 6px;
+      p {
+        color: #ccc;
+        line-height: 0.8;
+        font-size: 12px;
+
+        &:last-child {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  #det1 {
+    span {
+      border: 1px solid #cedafd;
+      border-radius: 100%;
+      background: #cedafd;
+      padding: 1rem;
+    }
+  }
+  #det2 {
+    span {
+      border: 1px solid #f9cca0;
+      border-radius: 100%;
+      background: #f9cca0;
+      padding: 1rem;
+    }
+  }
+  #det3 {
+    span {
+      border: 1px solid #bedba6;
+      border-radius: 100%;
+      background: #bedba6;
+      padding: 1rem;
+    }
+  }
+}
+.order__accordions {
+  margin-top: 2rem;
+  .uk-accordion-title {
+    background: white;
+    border: 1px solid inherit;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 16px;
+  }
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  span {
+    color: #acafb0;
+    &:last-child {
+      color: black;
+    }
+  }
+}
+.sum-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  p {
+    color: black;
+
+    &:last-child {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}
+// .uk-active{
+//   margin: 0;
+// }
+.uk-tab > .uk-active > a {
+  margin-bottom: -10px;
+  padding: 5px 10px 15px 10px;
+}
+.uk-tab > * > a {
+  border-bottom: 2px solid transparent;
+}

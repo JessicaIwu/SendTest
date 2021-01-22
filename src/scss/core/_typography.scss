@@ -1,0 +1,141 @@
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+span {
+  text-rendering: auto;
+  color: $black;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+a {
+  font-size: 0.875rem;
+  // font-weight: 500;
+  text-decoration: none;
+  color: $black;
+  &.link-button {
+    color: $black;
+    font-weight: 500;
+
+    &:hover {
+      color: darken($black, 7);
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.5px;
+  line-height: 1.4;
+  margin: 5px 0;
+  font-weight: 600;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  span,
+  a {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+}
+
+$responsive-font-size-multiplier: 0.66;
+
+h1 {
+  font-size: 4rem;
+
+  @include screen(med) {
+    font-size: 4rem * $responsive-font-size-multiplier;
+  }
+}
+
+h2 {
+  font-size: 3.5rem;
+
+  @include screen(med) {
+    font-size: 3.5rem * $responsive-font-size-multiplier;
+  }
+}
+
+h3 {
+  font-size: 3rem;
+
+  @include screen(med) {
+    font-size: 3rem * $responsive-font-size-multiplier;
+  }
+}
+
+h4 {
+  font-size: 2.5rem;
+
+  @include screen(med) {
+    font-size: 2.5rem * $responsive-font-size-multiplier;
+  }
+}
+
+h5 {
+  font-size: 1.7rem;
+
+  @include screen(med) {
+    font-size: 1.4rem;
+  }
+}
+
+h6 {
+  font-size: 1.28rem;
+}
+
+strong {
+  font-weight: 600;
+}
+
+p {
+  span {
+    font-size: inherit;
+  }
+}
+
+p,
+li {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 10px 0;
+  font-weight: normal;
+
+  a {
+    font-size: inherit;
+  }
+  @include screen(small) {
+    font-size: 0.9rem;
+  }
+}
+
+span {
+  font-size: 0.8rem;
+  line-height: 1.3;
+
+  a {
+    color: $black;
+    font-size: inherit;
+    font-weight: 600;
+  }
+}

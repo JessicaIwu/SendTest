@@ -1,0 +1,200 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  .logo_area {
+    display: flex;
+    img {
+      width: 40px;
+    }
+    p {
+      padding-left: 10px;
+      font-weight: 700;
+      font-size: 24px;
+    }
+  }
+  .profile_area {
+    border: 1px solid #f5f8f9;
+    padding-left: 1rem;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    background: #f5f8f9;
+    .profile-image img {
+      box-shadow: 0px 4px 10px rgba($black, 0.1);
+      border-radius: 25px;
+      height: 50px;
+      width: 50px;
+      object-fit: cover;
+      @include screen(small) {
+        height: 40px;
+        width: 40px;
+      }
+    }
+    span {
+      margin: 0 15px;
+    }
+  }
+  .logo {
+    display: block;
+    @include screen(small) {
+      display: none;
+    }
+    &--desktop {
+      @include screen(small) {
+        display: none;
+      }
+      display: flex;
+      a {
+        margin-left: 15px;
+      }
+      p {
+        margin: 0;
+        padding: 0;
+        &:nth-child(1) {
+          font-size: 18px;
+        }
+        &:nth-child(2) {
+          font-size: 12px;
+          color: #aaaaaa;
+        }
+      }
+    }
+    &--mobile {
+      display: none;
+      @include screen(small) {
+        display: block;
+      }
+    }
+  }
+
+  &__search {
+    position: relative;
+    max-width: 540px;
+    width: 100%;
+    @include screen(small) {
+      position: fixed;
+      align-items: center;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 90;
+      height: 75px;
+      display: flex;
+      justify-content: center;
+      padding: 16px 30px;
+      background: #ffffff;
+      padding-left: 0;
+      transform: translateY(-110px);
+      opacity: 0;
+      transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    &.open {
+      @include screen(small) {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .back {
+      display: none;
+      @include screen(small) {
+        display: block;
+        padding: 0 27px;
+        padding-top: 5px;
+      }
+    }
+
+    .suggestion {
+      position: absolute;
+      background: #ffffff;
+      border: 1px solid #eeeeee;
+      box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      -moz-animation-delay: 3.5s;
+      -webkit-animation-delay: 3.5s;
+      -o-animation-delay: 3.5s;
+      animation-delay: 3.5s;
+      transition: all 0.5s;
+      padding: 0 30px;
+      opacity: 0;
+      @include screen(small) {
+        top: 75px;
+        right: 0;
+      }
+      p {
+        font-size: 0.875rem;
+        padding: 11px 0;
+        margin: 0;
+        color: #999999;
+        text-transform: capitalize;
+        cursor: pointer;
+        span {
+          color: #000;
+        }
+      }
+    }
+
+    .icon {
+      background-color: $silver2;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f9f9fb;
+      border: 1px solid $silver1;
+      padding: 0 12px;
+      @include screen(small) {
+        right: 30px;
+        top: 16px;
+        bottom: 16px;
+        padding: 0 13px;
+      }
+    }
+    input {
+      /* Remove First */
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 100%;
+      border: 1px solid $silver1;
+      box-shadow: 0px 0px 40px rgba($black, 0.05);
+      padding: 12px 21px;
+      outline: none;
+      font-size: 14px;
+      &:focus {
+        + .suggestion {
+          opacity: 1;
+          padding: 20px 30px;
+          height: auto;
+        }
+      }
+      &::placeholder {
+        color: #999999;
+        font-size: inherit;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    .search {
+      display: none;
+      @include screen(small) {
+        display: block;
+      }
+    }
+  }
+}
+
+input[type="text"] {
+  /* Remove First */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

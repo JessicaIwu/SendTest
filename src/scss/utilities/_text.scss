@@ -1,0 +1,40 @@
+.danger-text {
+  color: $red;
+}
+
+.success-text {
+  color: $green;
+}
+
+.black-text {
+  color: $black;
+}
+
+.white-text {
+  color: white;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.center-text {
+  text-align: center;
+}
+
+$weights: (300, 400, 500, 600, 700);
+
+@each $weight in $weights {
+  .font-weight-#{$weight} {
+    font-weight: #{$weight} !important;
+  }
+}
+
+@for $size from 8 through 36 {
+  .font-size-#{$size} {
+    font-size: #{$size/16}rem !important;
+  }
+  .line-height-#{$size} {
+    line-height: #{$size/16}rem !important;
+  }
+}

@@ -1,0 +1,43 @@
+/* Padding and Margin Helpers */
+$spaceamounts: (-25, -20, -16, -10, -5, 0, 3, 5, 10, 15, 16, 20, 25, 30, 35, 40, 45, 50, 60, 75, 100, 120, 150, 200);
+$sides: (top, bottom, left, right);
+
+@each $space in $spaceamounts {
+  .m-#{$space} {
+    margin: #{$space}px !important;
+  }
+
+  .p-#{$space} {
+    padding: #{$space}px !important;
+  }
+  @each $side in $sides {
+    .m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+
+    .p-#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+}
+
+@mixin vis-factory($thisPrefix) {
+  @each $space in $spaceamounts {
+    .m-#{$thisPrefix}-#{$space} {
+      margin: #{$space}px !important;
+    }
+
+    .p-#{$thisPrefix}-#{$space} {
+      padding: #{$space}px !important;
+    }
+    @each $side in $sides {
+      .m-#{$thisPrefix}-#{str-slice($side, 0, 1)}-#{$space} {
+        margin-#{$side}: #{$space}px !important;
+      }
+
+      .p-#{$thisPrefix}-#{str-slice($side, 0, 1)}-#{$space} {
+        padding-#{$side}: #{$space}px !important;
+      }
+    }
+  }
+}

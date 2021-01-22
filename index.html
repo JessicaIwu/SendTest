@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.13/dist/css/uikit.min.css" />
+
+  <link rel="stylesheet" href="dist/app.css" />
+  <title>SEND TEST</title>
+</head>
+
+<body>
+
+  <div class="body">
+    <main class="main">
+      <section class="inner-container">
+        <div class="inner-container__curved">
+          <section class="nav header_section">
+            <div class="logo_area">
+              <img src="/src/img/tollyLogo.png" alt="Tolly Temporary Logo" class="logo">
+              <p>Tolly</p>
+            </div>
+            <div class="profile_area">
+              <img src="/src/svg/angle-arrow-down.svg" alt="arrow down">
+              <span>Jessica</span>
+              <a href="#" class="profile-image"><img src="src/img/profile.jpg" alt="Profile Picture" /></a>
+            </div>
+          </section>
+          <section class="payment_details">
+            <div class="payment_details__header">
+              <h4>Payment details</h4>
+              <div class="secure-card">
+                <img src="/src/svg/lock.svg" alt="Lock">
+                <div>
+                  <h6 class="h6">Card is Secure</h6>
+                  <p>Your data is protected, <br> everything will be private</p>
+                </div>
+              </div>
+            </div>
+            <div class="payment_details__tab">
+              <ul data-uk-tab="{connect:'#my-id'}" uk-tab>
+                <li class="uk-active">
+                  <a href="#">Credit Card</a>
+                </li>
+                <li><a href="#">Paypal</a></li>
+                <li><a href="#">Other</a></li>
+              </ul>
+
+              <!-- This is the container of the content items -->
+              <ul id="my-id" class="uk-switcher">
+                <li>
+                  <div class="credit-card-tab">
+                    <div class="card__images">
+                      <img src="/src/img/card-black.png" alt="card image">
+                      <img src="/src/img/card-black.png" alt="card image">
+                      <div class="add-new-card">
+                        <img src="/src/svg/check.svg" alt="check">
+                      </div>
+                    </div>
+                    <div class="card__data">
+                      <label for="card-number">Credit Card</label>
+                      <input type="text" name="card-number" placeholder="4441 2354 3266 5655">
+                      <label for="card-name">Name</label>
+                      <input type="text" name="card-name" placeholder="Jessica Iwu">
+                      <div class="flexer">
+                        <div class="first-child">
+                          <label for="exp-date">Expiration Date</label>
+                          <input type="text" name="exp-date" placeholder="08/2021">
+                        </div>
+                        <div>
+                          <label for="cvv">CVV</label>
+                          <input type="text" name="cvv" placeholder="407">
+                        </div>
+                      </div>
+                      <div class="action">
+                        <button class="btn">Confirm Order</button>
+                        <a href="" class="cancel">Cancel and Return</a>
+                      </div>
+
+                    </div>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </section>
+
+
+        </div>
+        <div class="inner-container__no-curve">
+          <div class="order_details">
+            <h4>
+              Order Summary
+            </h4>
+            <div class="order_details__activities">
+              <div class="det" id="det1">
+                <span>
+                  <img src="/src/svg/shipping.svg" alt="">
+                </span>
+                <div>
+                  <p>Step 1</p>
+                  <p>Shipping</p>
+                </div>
+              </div>
+              <div class="det" id="det2">
+                <span>
+                  <img src="/src/svg/pay.svg" alt="">
+                </span>
+                <div>
+                  <p>Step 2</p>
+                  <p>Payment</p>
+                </div>
+              </div>
+              <div class="det" id="det3">
+                <span>
+                  <img src="/src/svg/review.svg" alt="">
+                </span>
+                <div>
+                  <p>Step 3</p>
+                  <p>Review</p>
+                </div>
+              </div>
+            </div>
+            <div class="order__accordions">
+              <ul uk-accordion="collapsible: true">
+                <li class="uk-open">
+                  <a class="uk-accordion-title" href="#">Prada</a>
+                  <div class="uk-accordion-content">
+                    <div class="list">
+                      <span>Leather mini-bag</span>
+                      <span>$1850.00</span>
+                    </div>
+                    <div class="list">
+                      <span>Estimated Shipping</span>
+                      <span>$370.00</span>
+                    </div>
+                    <div class="list">
+                      <span>Discount</span>
+                      <span>$0.00</span>
+                    </div>
+                    <div class="list">
+                      <span>Total</span>
+                      <span>$2222.00</span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a class="uk-accordion-title" href="#">Dr Martens</a>
+                  <div class="uk-accordion-content">
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                      consequat. Duis aute irure dolor reprehenderit.</p>
+                  </div>
+                </li>
+                <li>
+                  <a class="uk-accordion-title" href="#">Chanel</a>
+                  <div class="uk-accordion-content">
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                      pariatur. Excepteur sint occaecat cupidatat proident.</p>
+                  </div>
+                </li>
+              </ul>
+              <div class="sum-total">
+                <p>Total Amount</p>
+                <p>$3680.00</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.13/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.13/dist/js/uikit-icons.min.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="dist/app.js"></script>
+  <script src="src/js/main.js"></script>
+</body>
+
+</html>

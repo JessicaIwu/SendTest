@@ -1,0 +1,35 @@
+// Sass Flexbox
+@import 'flexbox/variables/main.scss';
+@import 'flexbox/mixins/main';
+@import 'flexbox/grid';
+@import 'flexbox/visibility';
+
+.clear {
+  clear: both;
+}
+
+.container {
+  border: 2px solid red;
+  // max-width: 1300px;
+  padding: 0 40px;
+  width: 100%;
+  &--fluid {
+    max-width: unset;
+  }
+
+  @include screen(small) {
+    padding: 0 30px;
+  }
+  &--sm {
+    max-width: 760px;
+  }
+  &--md {
+    max-width: 960px;
+  }
+  &--lg {
+    max-width: 1240px;
+  }
+  &--overflow-hidden {
+    overflow: hidden;
+  }
+}
